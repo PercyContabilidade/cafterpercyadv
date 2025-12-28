@@ -25,45 +25,21 @@
             background-color: var(--fundo-claro);
         }
 
-        /* --- Cabeçalho (Header) com Logo em Texto --- */
+        /* --- Cabeçalho (Header) com Imagem da Logo --- */
         header {
             background-color: var(--azul-marinho);
             color: var(--branco);
-            padding: 25px 20px;
+            padding: 20px;
             text-align: center;
             border-bottom: 5px solid var(--dourado);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
-
-        .logo-icon {
-            fill: var(--dourado);
-            width: 45px;
-            height: 45px;
-            margin-right: 15px;
-        }
-
-        .logo-text h1 {
-            margin: 0;
-            font-size: 2.2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            line-height: 1;
-        }
-
-        .logo-text span {
-             font-size: 1rem;
-             color: var(--dourado);
-             letter-spacing: 3px;
-             display: block;
+        .logo-img {
+            max-width: 300px; /* Tamanho máximo da logo */
+            width: 100%; /* Responsivo para celulares */
+            height: auto;
+            display: block;
+            margin: 0 auto 10px auto; /* Centraliza e dá espaço abaixo */
         }
 
         header p.tagline {
@@ -171,7 +147,7 @@
 
         /* --- Responsividade --- */
         @media (max-width: 600px) {
-            .logo-text h1 { font-size: 1.8rem; }
+            .logo-img { max-width: 250px; }
             .container { width: 100%; padding: 0; }
             section { padding: 20px; }
         }
@@ -180,15 +156,8 @@
 <body>
 
     <header>
-        <div class="logo-container">
-            <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C12 2 12 2 12 2C12 2 12 2 12 2C12 2 12 2 12 2C12 2 12 2 12 2ZM5 20C5 20.55 5.45 21 6 21H18C18.55 21 19 20.55 19 20V22H5V20ZM12 4L2 9V11H22V9L12 4ZM8 13C6.34 13 5 14.34 5 16V18H11V16C11 14.34 9.66 13 8 13ZM16 13C14.34 13 13 14.34 13 16V18H19V16C19 14.34 17.66 13 16 13Z"/></svg>
-            
-            <div class="logo-text">
-                <h1>CAFTER PERCY</h1>
-                <span>ADVOCACIA</span>
-            </div>
-        </div>
-        <p>PREVIDENCIÁRIA E TRABALHISTA</p>
+        <img src="logo.png" alt="Logo Cafter Percy Advocacia" class="logo-img">
+        
         <p class="tagline">Seus Direitos, Nossa Prioridade.</p>
     </header>
 
